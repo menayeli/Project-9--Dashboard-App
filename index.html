@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nayeli's App</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" />
+
+</head>
+	<body>
+		<header class="top-header">
+			<div class="container clearfix">
+			<h1 class="logo">YourApp&trade;</h1>
+
+			<ul class="nav">
+				<li class="nav-item notification">
+					<img src="img/icons/icon-bell.svg" alt="alert icon for messages" class="notification-icon"></li>
+				<li class="nav-item"><div class="profile user"></div></li>
+				<li class="nav-item">Nayeli Castanon</li>
+			</ul>
+			</div>
+		</header>
+
+	<!-- Side Nav -->
+
+	<div class="wrapper">
+
+	<div class="side-nav">
+		<ul class="horizontal-nav">
+		<li class="side-nav-item"><img src="img/icons/icon-dashboard.svg" alt="dashboard" class="icons"></li>
+		<li class="side-nav-item"><img src="img/icons/icon-settings.svg" alt="setings" class="icons"></li>
+		<li class="side-nav-item"><img src="img/icons/icon-visits.svg" alt="visits" class="icons"></li>
+		<li class="side-nav-item"><img src="img/icons/icon-members.svg" alt="members" class="icons"></li></ul>
+	</div>
+
+	<!-- Dasboard & Search-->
+	<div class="main-content">
+		<div class="dashboard">
+	        <h2 class="title">Dashboard</h2>
+	        <form class="search-bar">
+	          <input type="search" class="search-box" placeholder="search...">
+	        </form>
+	 </div>
+	 <!--Dashboard end  -->
+	 <!-- Traffic Chart -->
+	  <div class="container">
+        <div class="alert">
+          <p>Alert:  You have a new notification.</p>
+          <img class="close" src="img/icons/close-icon.png" alt="close button">
+        </div>
+      </div>
+      <div class="chart-area">
+        <h3>Traffic</h3>
+        <ul>
+          <li>Daily</li>
+          <li class="active">Weekly</li>
+          <li>Monthly</li>
+          <li>Yearly</li>
+        </ul>
+        <canvas id="traffic-chart" height="150" width="400"></canvas>
+      </div>
+      <!-- End traffic chart -->
+      <!-- check -->
+      <!-- daily traffic-->
+      <div class="two-column">
+        <div class="daily-traffic">
+          <h3>Daily Traffic</h3>
+          <canvas id="daily-traffic-chart"></canvas>
+        </div>
+        <div class="mobile-users">
+          <h3>Mobile Users</h3>
+          <canvas id="mobile-chart" height="240" width="500"></canvas>
+        </div>
+      </div>
+      <!-- End of daily traffic and mobile chart area -->
+       <!-- Start of the Social Stats section -->
+      <div class="social clearfix">
+        <h2>Social Stats</h2>
+        <div class="social-card">
+          <div class="social-icon">
+          	<img src="img/icons/icon-twitter.svg" alt="twitter icon">
+          </div>
+          <div class="social-info">
+            <h4>Twitter</h4>
+            <p>10,345</p>
+          </div>
+        </div>
+        <div class="social-card">
+          <div class="social-icon">
+          	<img src="img/icons/icon-facebook.svg" alt="facebook icon">
+          </div>
+          <div class="social-info">
+            <h4>Facebook</h4>
+            <p>8,739</p>
+          </div>
+        </div>
+        <div class="social-card">
+          <div class="social-icon">
+			<img src="img/icons/icon-google-plus.svg" alt="google plus icon">
+          </div>
+          <div class="social-info">
+            <h4>Google+</h4>
+            <p>2,530</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of the Social Stats section -->
+
+      <!-- new members section -->
+      <div class="row clearfix">
+      <div id="members">
+        <h3>New Members</h3>
+        <ul class="new-members">
+            <!-- Using https://randomuser.me/photos and documentation for this section -->
+        </ul>
+      </div>
+
+      <div id="activity">
+        <h3>Activity</h3>
+        <ul class="member-activity">
+          <!-- Using https://randomuser.me/photos and documentation for this section -->
+        </ul>
+      </div>
+      </div>
+      <!-- End of new member -->
+  	  <div class="row clearfix">
+      <div id="message">
+        <h3>Message User</h3>
+        <form>
+          <input type="search" name="usersearch" placeholder="Search for user">
+          <textarea placeholder="Message for user" name="message"> </textarea>
+          <button type="submit" name="send">Send</button>
+        </form>
+      </div>
+
+
+      <div id="settings">
+        <h3>Settings</h3>
+        <form>
+          <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox">
+
+            <strong>
+            Send Email Notifications
+            </strong>
+
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+          <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox">
+
+            <strong>
+            Set Profile to Public
+            </strong>
+
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+            <select>
+            <option >Select Time Zone </option>
+            <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+            <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+            <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+            <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+            <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+          </select>
+          <button type="submit">Save</button>
+          <button type="submit">Cancel</button>
+        </form>
+      </div>
+  	</div>
+	   
+	 </div>
+	</div>
+		<footer>
+		</footer>
+
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+ 	<script src="js/main.js"></script>
+	</body>
+</html>
