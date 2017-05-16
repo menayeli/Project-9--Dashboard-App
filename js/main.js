@@ -166,7 +166,7 @@ $("button[name='send']").click( function() {
   let message = "<div class='notification'><p></p></div>";
   let messageText = "";
   let color = "";
-  if ( $("input[name='usersearch']").val() == "" || $("textarea").val() == "" ) {
+  if ( $("input[name='usersearch']").val() == "" || $("textarea").val() == " " || $("textarea").val() == "" ) {
     messageText = "Your message was not sent.  Please complete all fields before clicking send.";
     color = "tomato";
   } else {

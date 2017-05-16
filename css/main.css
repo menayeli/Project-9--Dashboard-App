@@ -198,10 +198,6 @@ select:focus {
   margin: 7% 0;
   align-items: center; }
 
-  .notification{
-    padding: 0!important
-  }
-
 .alert p,
 .notification p {
   color: #fff;
@@ -210,8 +206,9 @@ select:focus {
 
 .alert img,
 .notification img {
-  width: 27px;
-  cursor: pointer; }
+    width: 27px;
+    cursor: pointer;
+    margin: 0 auto; }
 
 .notification {
   position: relative; }
@@ -219,7 +216,7 @@ select:focus {
 .notification::before {
   position: absolute;
   top: 0;
-  right: calc(50% - 1.5626rem);
+  right: calc(52% - 1.5626rem);
   content: "";
   width: .5rem;
   height: .5rem;
@@ -227,8 +224,8 @@ select:focus {
   border-radius: 50%; }
   @media (min-width: 768px) {
     .notification::before {
-      top: -4px;
-      right: -4px; } }
+          top: 4px;
+    right: 1px; } }
 
   /*when active apply this style*/
 .active {
@@ -255,6 +252,7 @@ canvas {
 }
 .chart-area, .daily-traffic, .mobile-users{
   padding-bottom: 7%;
+  margin:0 auto;
 }
 
 .chart-area ul {
